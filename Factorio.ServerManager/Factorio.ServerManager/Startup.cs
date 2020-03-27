@@ -58,7 +58,7 @@ namespace Factorio.ServerManager
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapHub<ServerManagerHub>("/server");
+                endpoints.MapHub<ServerManagerHub>("/hub");
 
                 endpoints.MapControllerRoute("default",
                     "{controller}/{action=Index}/{id?}");

@@ -28,5 +28,14 @@
             await this.manager.Stop();
             return this.Ok(this.manager.Status);
         }
+
+        [HttpGet]
+        public FactorioServerState Get()
+        {
+            return new FactorioServerState
+            {
+                IsRunning = this.manager.Status == ServerStatus.Started
+            };
+        }
     }
 }
